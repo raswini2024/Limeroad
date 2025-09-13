@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>Profile Page</title>
+    <style>
+        input{ 
+            height:30px;
+            width:200px;
+            margin-top: 50px;
+            margin-left: 30%;
+        }
+       #box{
+        margin-left:30%;
+        height:600px;
+        width:600px;
+        border:solid black;
+       }
+       h3{
+        margin-left: 50px;
+        
+       }
+       button{
+       margin-left: 300px;
+       cursor:pointer;
+       width:80px;
+       height:40px;
+       }
+       
+    </style>
+</head>
+<body>
+  <form onsubmit="return confirm('You Have Successfully Logged In')">
+    <div id="box">
+        <input type="text" placeholder="Your Name" id="1st" oninput="fun()" required><br/>
+        <input type="number" placeholder="Mobile Number" id="2nd" oninput="func()" required><br/>
+        <input type="email" placeholder="Email Id" id="3rd" oninput="funct()"required><br/>
+        <input type="address" placeholder="Address" id="4th" oninput="functi()"required><br/>
+        <h3 id="pa" style="margin-top: 50px;">Name :</h3>
+        <h3 id="par">Contact:</h3>
+        <h3 id="para">Email Id:</h3>
+        <h3 id="parag">Address :</h3>
+        <button type="submit">Submit</button>
+    </div></form>
+    <script>
+        var one=document.getElementById("1st");
+        var two=document.getElementById("pa");
+        function fun(){
+            two.textContent=one.value;
+        }
+         var onee=document.getElementById("2nd");
+        var twoo=document.getElementById("par");
+        function func(){
+            twoo.textContent=onee.value;
+        }
+         var three=document.getElementById("3rd");
+        var four=document.getElementById("para");
+        function funct(){
+            four.textContent=three.value;
+        }
+         var five=document.getElementById("4th");
+        var six=document.getElementById("parag");
+        function functi(){
+            six.textContent=five.value;
+        }
+    </script>
+</body>
