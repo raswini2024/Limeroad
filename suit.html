@@ -15,10 +15,34 @@
     </div>
     <div class="hlo2">
      <a href="sign.html"><p>🖊️<br/><b>ScrapBook</b></p></a>
-    <p>🔍<br/><b>Search</b></p>
-    <p>🛒<br/><b>Cart</b></p>
-    <p>👤<br/><b>Profile</b></p>
+    <p style="cursor:pointer;" onclick="openForm()" >🔍<br/><b>Search</b></p>
+    <a href="cart.html"><p>🛒<br/><b>Cart</b></p></a>
+     <a href="profile.html"><p>👤<br/><b>Profile</b></p></a>
     </div></div>
+    <div id="popupForm" style="display:none;
+     position:fixed;
+     top:21%;
+     left:83%;
+     transform:translate(-50%, -50%);
+     background:white;
+     padding:15px;
+     border:1px solid #ccc;
+     box-shadow:0 4px 10px rgba(0,0,0,0.2);
+     border-radius:8px;">
+  <form>
+    <input type="text" placeholder="Search...">
+    <button type="button" style="cursor:pointer;">Search</button>
+    <button type="button" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+function openForm() {
+  document.getElementById("popupForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
+</script>
     <div class="h4">
      <a href="web.html"><h4>Women</h4></a>
        <a href="men.html"> <h4>Men</h4></a>
